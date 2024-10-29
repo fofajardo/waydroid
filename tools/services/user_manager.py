@@ -11,6 +11,8 @@ from tools.interfaces import IPlatform
 stopping = False
 
 def start(args, session, unlocked_cb=None):
+    logging.warning("Skipping user manager")
+    return
     waydroid_data = session["waydroid_data"]
     apps_dir = session["xdg_data_home"] + "/applications/"
 
