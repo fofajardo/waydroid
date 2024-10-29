@@ -14,6 +14,8 @@ stopping = False
 
 
 def start(args, session, unlocked_cb=None):
+    logging.warning("Skipping user manager")
+    return
 
     apps_dir = Path(session["xdg_data_home"]) / "applications"
     apps_dir.mkdir(0o700, exist_ok=True)
