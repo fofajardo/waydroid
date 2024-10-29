@@ -94,12 +94,12 @@ def start(args, unlocked_cb=None, background=True):
             logging.error("WayDroid container is not listening")
         sys.exit(0)
 
-    services.user_manager.start(args, session, unlocked_cb)
+    #services.user_manager.start(args, session, unlocked_cb)
     services.clipboard_manager.start(args)
     service(args, mainloop)
 
 def do_stop(args, looper):
-    services.user_manager.stop(args)
+    #services.user_manager.stop(args)
     services.clipboard_manager.stop(args)
     looper.quit()
 
